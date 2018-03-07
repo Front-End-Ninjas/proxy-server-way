@@ -22,20 +22,22 @@
     <script src="http://localhost:3003/bundle.js"></script>
   </body>
     <script>
+      const itemNumber = window.location.search.slice(4) || 0;
+      
       ReactDOM.render(
-        React.createElement(Review, {id: 0}, null),
+        React.createElement(Review, {id: itemNumber}, null),
         document.getElementById('reviews')
       );
       ReactDOM.render(
-        React.createElement(IndexDesc, {id: 0}, null),
+        React.createElement(IndexDesc, {id: itemNumber}, null),
         document.getElementById('description')
       );
       ReactDOM.render(
-        React.createElement(SimilarListView, {id: 0}, null),
+        React.createElement(SimilarListView, {id: itemNumber}, null),
         document.getElementById('similar')
       );
       ReactDOM.render(
-        React.createElement(App, {id: 0}, null),
+        React.createElement(App, {id: itemNumber}, null),
         document.getElementById('imageGallery')
       );
     </script>
